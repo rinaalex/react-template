@@ -1,4 +1,3 @@
 import React from 'react';
-import { Products } from '@products';
 
-export const Cart = () => <Products />;
+export const Cart = () => <h2>Cart</h2>;
