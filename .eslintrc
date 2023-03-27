@@ -1,0 +1,39 @@
+{
+    "extends": [
+      "react-app",
+      "eslint:recommended",
+      "plugin:import/recommended",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "plugins": ["prettier", "import", "@typescript-eslint"],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [".js", ".jsx", ".ts", ".tsx"]
+        },
+        "alias": {
+          "map": [
+            ["@products", "./src/modules/products"],
+            ["@cart", "./src/modules/cart"]
+          ],
+          "extensions": [".ts", ".js", ".jsx", ".json"]
+        }
+      }
+    },
+    "rules": {
+      "prettier/prettier": "error",
+      "import/no-restricted-paths": [
+        "error",
+        {
+          "zones": [
+            {
+              "target": ["./src/modules/cart"],
+              "from": ["./src/modules/products"],
+              "message": "Импорт из модуля Products в Cart запрещен"
+            }
+          ]
+        }
+      ]
+    }
+  }
+  
