@@ -10,14 +10,12 @@
     "@types/node": "^16.18.19",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "husky": "^8.0.3",
     "lint-staged": "^13.2.0",
     "prettier": "^2.8.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
-    "typescript": "^4.9.5",
-    "web-vitals": "^2.1.4"
+    "typescript": "^4.9.5"
   },
   "scripts": {
     "start": "craco start",
@@ -28,7 +26,8 @@
     "prettier:check": "prettier \"src/**/*.{js,jsx,ts,tsx,json,md}\" --check",
     "lint:base": "eslint --ext js,jsx,ts,tsx --quiet",
     "lint": "npm run lint:base -- ./src",
-    "lint:fix": "npm run lint --fix"
+    "lint:fix": "npm run lint --fix",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -65,6 +64,7 @@
     "@craco/craco": "^7.1.0",
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1"
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3"
   }
 }
